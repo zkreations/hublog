@@ -1,7 +1,7 @@
 name = "Hublog"
 license = "MIT"
 licenselink = "https://github.com/zkreations/hublog/blob/main/LICENSE"
-description = "Un tema minimalista, ligero y didáctico para blogs en Hugo, sin dependencias ni JavaScript."
+description = "A minimalist, lightweight, and didactic Hugo blog theme with zero dependencies and no JavaScript."
 homepage = "https://github.com/zkreations/hublog"
 demosite = "https://hublog.zkreations.com"
 tags = ["blog", "minimal", "clean", "lightweight", "responsive", "no-js"]
