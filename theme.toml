@@ -1,0 +1,13 @@
+name = "Hublog"
+license = "MIT"
+licenselink = "https://github.com/zkreations/hublog/blob/main/LICENSE"
+description = "Un tema minimalista, ligero y didáctico para blogs en Hugo, sin dependencias ni JavaScript."
+homepage = "https://github.com/zkreations/hublog"
+demosite = "https://hublog.zkreations.com"
+tags = ["blog", "minimal", "clean", "lightweight", "responsive", "no-js"]
+features = ["minimalist", "zero-js", "responsive", "dark-mode", "seo"]
+min_version = "0.125.0"
+
+[author]
+  name = "zkreations"
+  homepage = "https://www.zkreations.com"
