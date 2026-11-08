@@ -6,7 +6,6 @@ homepage = "https://github.com/zkreations/hublog"
 demosite = "https://hublog.zkreations.com"
 tags = ["blog", "minimal", "clean", "lightweight", "responsive", "no-js"]
 features = ["minimalist", "zero-js", "responsive", "dark-mode", "seo"]
-min_version = "0.125.0"
 
 [author]
   name = "zkreations"

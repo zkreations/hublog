@@ -1,6 +1,21 @@
-# Hublog
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zkreations/hublog/refs/heads/main/images/logo.png" width="75" alt="Hublog" />
+  <h1 align="center">Hublog</h1>
+</p>
 
-A minimalist and lightweight Hugo blog theme. No dependencies, no JavaScript, and compatible with the standard Hugo binary.
+<p align="center">A minimalist and lightweight Hugo blog theme. No dependencies, no JavaScript, and compatible with the standard Hugo binary.</p>
+
+<p align="center">
+  <a href="https://github.com/zkreations/hublog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zkreations/hublog?style=for-the-badge&labelColor=030712&color=0d9488" alt="license"></a>
+  <a href="https://github.com/zkreations/hublog/releases"><img src="https://img.shields.io/github/v/release/zkreations/hublog?style=for-the-badge&labelColor=030712&color=0d9488" alt="release"></a>
+  <a href="https://app.netlify.com/projects/hublog/deploys"><img src="https://img.shields.io/netlify/00000?style=for-the-badge&labelColor=030712&color=0d9488&logo=netlify&logoColor=white" alt="netlify"></a>
+</p>
+
+<p align="center">
+  <a href="#none"><strong>View a live demo →</strong></a>
+</p>
+
+![cover](https://raw.githubusercontent.com/zkreations/hublog/main/images/cover.png)
 
 ## Features
 
@@ -14,7 +29,8 @@ A minimalist and lightweight Hugo blog theme. No dependencies, no JavaScript, an
 
 ## Requirements
 
-- **Hugo:** `>= 0.125.0` (Standard or Extended edition)
+- Hugo 0.164.0 or higher
+- [Git](https://git-scm.com/downloads)
 
 ## Installation
 
