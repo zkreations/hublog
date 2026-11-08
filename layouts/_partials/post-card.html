@@ -7,8 +7,14 @@
 {{- $dateFormat := site.Params.date_format | default "2006-01-02" -}}
 <article class="post-item">
   <div class="post-item-meta">
-    {{- with $page.Date -}}
-      <time class="post-item-date" datetime="{{ .Format "2006-01-02" }}">{{ .Format $dateFormat }}</time>
+    {{- $date := $page.Date -}}
+    {{- if and (not $page.Params.date) $page.GitInfo -}}
+      {{- $date = $page.GitInfo.AuthorDate -}}
+    {{- end -}}
+    {{- if and $date (not $date.IsZero) -}}
+      <time class="post-item-date" datetime="{{ $date.Format "2006-01-02" }}">{{ $date.Format $dateFormat }}</time>
+    {{- else -}}
+      <span class="post-item-date post-item-date-empty">Undated</span>
     {{- end -}}
   </div>
   {{- if eq $headingLevel "h3" -}}
