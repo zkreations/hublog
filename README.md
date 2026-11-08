@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="#none"><strong>View a live demo →</strong></a>
+  <a href="https://hublog.zkreations.com/"><strong>View a live demo →</strong></a>
 </p>
 
 ![cover](https://raw.githubusercontent.com/zkreations/hublog/main/images/cover.png)
