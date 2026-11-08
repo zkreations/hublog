@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/zkreations/hublog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zkreations/hublog?style=for-the-badge&labelColor=030712&color=0d9488" alt="license"></a>
   <a href="https://github.com/zkreations/hublog/releases"><img src="https://img.shields.io/github/v/release/zkreations/hublog?style=for-the-badge&labelColor=030712&color=0d9488" alt="release"></a>
-  <a href="https://app.netlify.com/projects/hublog/deploys"><img src="https://img.shields.io/netlify/00000?style=for-the-badge&labelColor=030712&color=0d9488&logo=netlify&logoColor=white" alt="netlify"></a>
+  <a href="https://app.netlify.com/projects/hublog-demo/deploys"><img src="https://img.shields.io/netlify/6523ccd6-405e-4c34-b2f2-e303e7ff9726?style=for-the-badge&labelColor=030712&color=0d9488&logo=netlify&logoColor=white" alt="netlify"></a>
 </p>
 
 <p align="center">
