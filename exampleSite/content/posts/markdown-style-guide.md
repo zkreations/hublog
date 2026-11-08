@@ -9,9 +9,8 @@ This document provides a complete demonstration of standard Markdown formatting 
 
 ## Headings
 
-The theme establishes a clear typographic hierarchy across all heading levels:
+The theme establishes a clear typographic hierarchy across heading levels:
 
-# Heading 1
 ## Heading 2
 ### Heading 3
 #### Heading 4
