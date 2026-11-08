@@ -1,16 +1,4 @@
-title = "Hublog"
-
-[params]
-  description = "A minimalist, fast Hugo theme with zero dependencies."
-  author = "Blog Author"
-  date_format = "2006-01-02"
-  home_posts_limit = 5
-  show_reading_time = true
-  footer_text = "Content published under open license."
-
-[markup]
-  [markup.goldmark.renderer]
-    unsafe = false
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 3
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.164.0"
