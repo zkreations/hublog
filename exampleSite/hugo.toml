@@ -1,0 +1,35 @@
+baseURL = 'https://example.org/'
+title = 'Hublog Demo'
+theme = 'hublog'
+summaryLength = 25
+
+[pagination]
+  pagerSize = 5
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
+
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 2
+
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 3
+
+[params]
+  description = 'A clean, accessible demo site powered by the Hublog theme for Hugo.'
+  author = 'Hublog Team'
+  date_format = '02 Jan 2006'
+  home_posts_limit = 4
+  show_reading_time = true
+  footer_text = 'Built with simplicity and speed in mind.'
+
+  [[params.social]]
+    name = 'GitHub'
+    url = 'https://github.com/zkreations/hublog'
