@@ -431,7 +431,7 @@ strong {
 }
 
 .site-footer {
-  margin-top: var(--space-5);
+  margin-top: var(--space-4);
   border-top: var(--border-width) solid var(--outline);
   padding-top: var(--space-4);
   font-size: var(--text-sm);
