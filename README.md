@@ -25,7 +25,7 @@
 - **Automatic dark mode:** Uses `@media (prefers-color-scheme: dark)`.
 - **Accessibility:** Semantic HTML5 landmarks, skip link, visible focus ring, and color contrast that meets WCAG AA ratios.
 - **Hugo Standard:** Works with the standard Hugo binary (extended edition not required).
-- **Metadata:** Open Graph, Twitter Cards, canonical URLs, and RSS autodiscovery.
+- **SEO & AI-ready:** Open Graph, Twitter Cards, canonical URLs, RSS autodiscovery, production-aware `robots.txt`, and structured `llms.txt` / `llms-full.txt` support.
 
 ## Requirements
 
@@ -72,7 +72,11 @@ Example `hugo.toml`:
 baseURL = 'https://example.org/'
 title = 'My Blog'
 theme = 'hublog'
+enableRobotsTXT = true
 summaryLength = 25
+
+[outputs]
+  home = ['html', 'rss', 'llms', 'llmsfull']
 
 [pagination]
   pagerSize = 5
@@ -133,6 +137,32 @@ tags: ["hugo", "minimalism"]
 image: "/images/cover.jpg" # Optional featured image
 ---
 ```
+
+### Search Engines & LLMs
+
+#### robots.txt
+
+Enable standard `robots.txt` generation in your `hugo.toml`:
+
+```toml
+enableRobotsTXT = true
+```
+
+The theme conditions crawler access automatically:
+- **Production (`hugo.IsProduction`):** Allows all crawlers and links to `sitemap.xml`.
+- **Development / Previews:** Blocks all crawlers (`Disallow: /`) to prevent indexing test or staging builds.
+
+#### llms.txt & llms-full.txt
+
+Hublog includes native support for the [llmstxt.org](https://llmstxt.org) standard for AI models and assistants. Enable the formats under `[outputs]` in your `hugo.toml`:
+
+```toml
+[outputs]
+  home = ['html', 'rss', 'llms', 'llmsfull']
+```
+
+- **`/llms.txt`**: A concise Markdown index of your posts and pages with summaries and links to supplementary resources.
+- **`/llms-full.txt`**: A complete consolidated Markdown document with full page content (`.RawContent`) for context-window feeding.
 
 ## Customization
 
