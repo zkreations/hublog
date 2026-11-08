@@ -470,12 +470,7 @@ h6 {
   margin-top: var(--space-3);
 }
 
-.single-content h1,
-.single-content h2,
-.single-content h3,
-.single-content h4,
-.single-content h5,
-.single-content h6 {
+.single-content :where(h1, h2, h3, h4, h5, h6) {
   line-height: var(--line-height-heading);
   color: var(--on-surface);
   margin-top: var(--space-4);
@@ -485,12 +480,9 @@ h6 {
 .single-content h1 { font-size: var(--text-2xl); }
 .single-content h2 { font-size: var(--text-xl); }
 .single-content h3 { font-size: var(--text-lg); }
-.single-content h4,
-.single-content h5,
-.single-content h6 { font-size: var(--text-base); }
+.single-content :where(h4, h5, h6) { font-size: var(--text-base); }
 
-.single-content ul,
-.single-content ol {
+.single-content :where(ul, ol) {
   padding-left: var(--space-4);
   margin-bottom: var(--space-3);
 }
