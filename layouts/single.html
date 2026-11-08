@@ -14,7 +14,7 @@
           <time datetime="{{ .Format "2006-01-02" }}">{{ .Format $dateFormat }}</time>
         {{- end -}}
         {{- if site.Params.show_reading_time | default true -}}
-          <span class="meta-separator">&bull;</span>
+          <span class="meta-separator" aria-hidden="true">&bull;</span>
           <span class="reading-time">{{ .ReadingTime }} min read</span>
         {{- end -}}
       </div>
@@ -23,7 +23,7 @@
 
   {{- with .Params.image -}}
     <div class="single-featured-image">
-      <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+      <img src="{{ . | relURL }}" alt="{{ $.Params.image_alt | default "" }}" loading="lazy">
     </div>
   {{- end -}}
 

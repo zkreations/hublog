@@ -10,13 +10,15 @@
   </header>
 
   {{- $paginator := .Paginate .Pages -}}
-  <div class="posts-list">
+  <ul class="posts-list" role="list">
     {{- range $paginator.Pages -}}
-      {{ partial "post-card.html" . }}
+      <li>
+        {{ partial "post-card.html" . }}
+      </li>
     {{- else -}}
-      <p class="posts-empty">No posts found in this term.</p>
+      <li class="posts-empty">No posts found in this term.</li>
     {{- end -}}
-  </div>
+  </ul>
 
   {{ partial "pagination.html" . }}
 </section>

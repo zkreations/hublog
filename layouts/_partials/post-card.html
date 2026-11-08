@@ -1,14 +1,26 @@
+{{- $page := . -}}
+{{- $headingLevel := "h2" -}}
+{{- if reflect.IsMap . -}}
+  {{- $page = .page -}}
+  {{- with .headingLevel }}{{ $headingLevel = . }}{{ end -}}
+{{- end -}}
 {{- $dateFormat := site.Params.date_format | default "2006-01-02" -}}
 <article class="post-item">
   <div class="post-item-meta">
-    {{- with .Date -}}
+    {{- with $page.Date -}}
       <time class="post-item-date" datetime="{{ .Format "2006-01-02" }}">{{ .Format $dateFormat }}</time>
     {{- end -}}
   </div>
-  <h2 class="post-item-title">
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </h2>
-  {{- $summary := or .Params.description .Summary -}}
+  {{- if eq $headingLevel "h3" -}}
+    <h3 class="post-item-title">
+      <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+    </h3>
+  {{- else -}}
+    <h2 class="post-item-title">
+      <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+    </h2>
+  {{- end -}}
+  {{- $summary := or $page.Params.description $page.Summary -}}
   {{- with $summary -}}
     <p class="post-item-summary">{{ . | plainify | htmlUnescape }}</p>
   {{- end -}}
