@@ -1,5 +1,5 @@
 :root {
-  --primary: #1a56db;
+  --primary: #0d9488;
   --on-primary: #ffffff;
   --surface: #ffffff;
   --on-surface: #1e293b;
@@ -48,13 +48,6 @@
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 body {
   font-family: var(--font-body);
@@ -64,6 +57,32 @@ body {
   background-color: var(--surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul,
+dl,
+dd {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -79,6 +98,17 @@ a:hover {
 :focus-visible {
   outline: var(--focus-ring) solid var(--primary);
   outline-offset: var(--focus-ring);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  overflow-wrap: break-word;
 }
 
 .site-layout {
@@ -126,7 +156,7 @@ a:hover {
 
 .site-title {
   font-size: var(--text-xl);
-  font-weight: bold;
+  font-weight: 500;
   color: var(--on-surface);
   text-decoration: none;
 }
@@ -163,7 +193,7 @@ a:hover {
 
 .nav-link.is-active {
   color: var(--primary);
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: underline;
   text-underline-offset: var(--underline-offset);
 }
@@ -242,7 +272,7 @@ a:hover {
 }
 
 .posts-all-link a {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .single-article {
@@ -301,7 +331,7 @@ a:hover {
 
 .tags-label {
   color: var(--on-surface-variant);
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .tags-list {
@@ -477,7 +507,6 @@ a:hover {
   color: var(--on-surface-variant);
   font-style: italic;
   background-color: var(--surface-variant);
-  border-radius: var(--radius);
 }
 
 .single-content blockquote > * + * {
@@ -519,9 +548,8 @@ a:hover {
   overflow-x: auto;
 }
 
-.single-content th,
-.single-content td {
-  padding: var(--space-2) var(--space-3);
+.single-content :where(th, td) {
+  padding: var(--space-2);
   border: var(--border-width) solid var(--outline);
   text-align: left;
   font-size: var(--text-sm);
@@ -529,7 +557,7 @@ a:hover {
 
 .single-content th {
   background-color: var(--surface-variant);
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .single-content img {
