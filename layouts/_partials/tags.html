@@ -1,0 +1,15 @@
+{{- with .Params.tags -}}
+<nav class="post-tags" aria-label="Tags">
+  <span class="tags-label">Tags:</span>
+  <ul class="tags-list">
+    {{- range . -}}
+      {{- $tagPage := site.GetPage (printf "/tags/%s" (. | urlize)) -}}
+      <li class="tags-item">
+        <a href="{{ with $tagPage }}{{ .RelPermalink }}{{ else }}{{ printf "/tags/%s/" (. | urlize) | relURL }}{{ end }}">
+          {{- with $tagPage }}{{ .Title }}{{ else }}{{ . }}{{ end -}}
+        </a>
+      </li>
+    {{- end -}}
+  </ul>
+</nav>
+{{- end -}}

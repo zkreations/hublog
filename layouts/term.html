@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="term-section">
+  <header class="term-header">
+    <h1 class="term-title">{{ with .Data.Singular }}{{ . | title }}: {{ end }}{{ .Title }}</h1>
+    {{- with .Content -}}
+      <div class="term-content">
+        {{ . }}
+      </div>
+    {{- end -}}
+  </header>
+
+  {{- $paginator := .Paginate .Pages -}}
+  <div class="posts-list">
+    {{- range $paginator.Pages -}}
+      {{ partial "post-card.html" . }}
+    {{- else -}}
+      <p class="posts-empty">No posts found in this term.</p>
+    {{- end -}}
+  </div>
+
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}

@@ -1,10 +1,40 @@
 {{ define "main" }}
-<article class="post-single">
-  <header class="post-header">
-    <h1 class="post-title">{{ .Title }}</h1>
+{{- $mainSections := site.Params.mainSections | default (slice "posts") -}}
+{{- $isPost := or (in $mainSections .Section) (in $mainSections .Type) -}}
+{{- $dateFormat := site.Params.date_format | default "2006-01-02" -}}
+<article class="single-article">
+  <header class="single-header">
+    <h1 class="single-title">{{ .Title }}</h1>
+    {{- with .Description -}}
+      <p class="single-description">{{ . }}</p>
+    {{- end -}}
+    {{- if $isPost -}}
+      <div class="single-meta">
+        {{- with .Date -}}
+          <time datetime="{{ .Format "2006-01-02" }}">{{ .Format $dateFormat }}</time>
+        {{- end -}}
+        {{- if site.Params.show_reading_time | default true -}}
+          <span class="meta-separator">&bull;</span>
+          <span class="reading-time">{{ .ReadingTime }} min read</span>
+        {{- end -}}
+      </div>
+    {{- end -}}
   </header>
-  <div class="post-content">
+
+  {{- with .Params.image -}}
+    <div class="single-featured-image">
+      <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+    </div>
+  {{- end -}}
+
+  <div class="single-content">
     {{ .Content }}
   </div>
+
+  {{- if $isPost -}}
+    <footer class="single-footer">
+      {{ partial "tags.html" . }}
+    </footer>
+  {{- end -}}
 </article>
 {{ end }}

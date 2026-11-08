@@ -1,0 +1,15 @@
+{{- $dateFormat := site.Params.date_format | default "2006-01-02" -}}
+<article class="post-item">
+  <div class="post-item-meta">
+    {{- with .Date -}}
+      <time class="post-item-date" datetime="{{ .Format "2006-01-02" }}">{{ .Format $dateFormat }}</time>
+    {{- end -}}
+  </div>
+  <h2 class="post-item-title">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h2>
+  {{- $summary := or .Params.description .Summary -}}
+  {{- with $summary -}}
+    <p class="post-item-summary">{{ . | plainify | htmlUnescape }}</p>
+  {{- end -}}
+</article>

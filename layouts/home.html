@@ -1,10 +1,31 @@
 {{ define "main" }}
-<section class="home-intro">
-  <h1>{{ .Title | default site.Title }}</h1>
-  {{ with .Content }}
-  <div class="home-content">
-    {{ . }}
-  </div>
-  {{ end }}
-</section>
+<div class="home-container">
+  {{- with .Title -}}
+    <h1 class="home-title">{{ . }}</h1>
+  {{- end -}}
+  {{- with .Content -}}
+    <div class="home-intro">{{ . }}</div>
+  {{- end -}}
+
+  <section class="recent-posts" aria-labelledby="recent-heading">
+    <h2 id="recent-heading" class="section-title">Recent posts</h2>
+    {{- $sections := site.Params.mainSections | default (slice "posts") -}}
+    {{- $limit := site.Params.home_posts_limit | default 5 -}}
+    {{- $posts := where site.RegularPages "Type" "in" $sections -}}
+    
+    <div class="posts-list">
+      {{- range first $limit $posts -}}
+        {{ partial "post-card.html" . }}
+      {{- else -}}
+        <p class="posts-empty">No posts published yet.</p>
+      {{- end -}}
+    </div>
+
+    {{- if gt (len $posts) $limit -}}
+      <div class="posts-all-link">
+        <a href="{{ with site.GetPage (index $sections 0) }}{{ .RelPermalink }}{{ else }}{{ printf "/%s/" (index $sections 0) | relURL }}{{ end }}">All posts &rarr;</a>
+      </div>
+    {{- end -}}
+  </section>
+</div>
 {{ end }}
