@@ -8,6 +8,21 @@ enableRobotsTXT = true
 enableGitInfo = true
 summaryLength = 25
 
+[outputFormats.llms]
+  baseName = 'llms'
+  mediaType = 'text/plain'
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.llmsfull]
+  baseName = 'llms-full'
+  mediaType = 'text/plain'
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ['html', 'rss', 'llms', 'llmsfull']
+
 [pagination]
   pagerSize = 5
 

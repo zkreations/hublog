@@ -55,3 +55,18 @@ other = "Pagination"
 
 [aria_tags]
 other = "Tags"
+
+[llms_posts]
+other = "Posts"
+
+[llms_pages]
+other = "Pages"
+
+[llms_optional]
+other = "Optional"
+
+[llms_full_title]
+other = "Full Content"
+
+[llms_full_description]
+other = "Consolidated full plain text content for LLMs"

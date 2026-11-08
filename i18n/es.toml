@@ -55,3 +55,18 @@ other = "Paginación"
 
 [aria_tags]
 other = "Etiquetas"
+
+[llms_posts]
+other = "Publicaciones"
+
+[llms_pages]
+other = "Páginas"
+
+[llms_optional]
+other = "Opcional"
+
+[llms_full_title]
+other = "Contenido completo"
+
+[llms_full_description]
+other = "Contenido consolidado en texto plano para LLMs"
