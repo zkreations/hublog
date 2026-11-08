@@ -85,14 +85,6 @@ dd {
   padding: 0;
 }
 
-ul {
-  list-style: square outside;
-}
-
-ol {
-  list-style: decimal outside;
-}
-
 a {
   color: var(--primary);
   text-decoration: underline;
@@ -486,6 +478,9 @@ strong {
   padding-left: var(--space-4);
   margin-bottom: var(--space-3);
 }
+
+.prose ul { list-style: square outside; }
+.prose ol { list-style: decimal outside; }
 
 .prose li {
   margin-bottom: var(--space-1);
