@@ -17,11 +17,11 @@
         {{- if and $date (not $date.IsZero) -}}
           <time datetime="{{ $date.Format "2006-01-02" }}">{{ $date.Format $dateFormat }}</time>
         {{- else -}}
-          <span class="single-date-empty">Undated</span>
+          <span class="single-date-empty">{{ i18n "undated" }}</span>
         {{- end -}}
         {{- if site.Params.show_reading_time | default true -}}
           <span class="meta-separator" aria-hidden="true">&bull;</span>
-          <span class="reading-time">{{ .ReadingTime }} min read</span>
+          <span class="reading-time">{{ i18n "reading_time" .ReadingTime }}</span>
         {{- end -}}
       </div>
     {{- end -}}

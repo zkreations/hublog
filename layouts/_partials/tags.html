@@ -1,6 +1,6 @@
 {{- with .Params.tags -}}
-<nav class="post-tags" aria-label="Tags">
-  <span class="tags-label">Tags:</span>
+<nav class="post-tags" aria-label="{{ i18n "aria_tags" }}">
+  <span class="tags-label">{{ i18n "tags_label" }}</span>
   <ul class="tags-list">
     {{- range . -}}
       {{- $tagPage := site.GetPage (printf "/tags/%s" (. | urlize)) -}}

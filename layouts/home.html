@@ -6,7 +6,7 @@
   {{- end -}}
 
   <section class="recent-posts" aria-labelledby="recent-heading">
-    <h2 id="recent-heading" class="section-title">Recent posts</h2>
+    <h2 id="recent-heading" class="section-title">{{ i18n "recent_posts" }}</h2>
     {{- $sections := site.Params.mainSections | default (slice "posts") -}}
     {{- $limit := site.Params.home_posts_limit | default 5 -}}
     {{- $posts := where site.RegularPages "Type" "in" $sections -}}
@@ -17,13 +17,13 @@
           {{ partial "post-card.html" (dict "page" . "headingLevel" "h3") }}
         </li>
       {{- else -}}
-        <li class="empty-state">No posts published yet.</li>
+        <li class="empty-state">{{ i18n "no_posts_published" }}</li>
       {{- end -}}
     </ul>
 
     {{- if gt (len $posts) $limit -}}
       <div class="posts-all-link">
-        <a href="{{ with site.GetPage (index $sections 0) }}{{ .RelPermalink }}{{ else }}{{ printf "/%s/" (index $sections 0) | relURL }}{{ end }}">All posts <span aria-hidden="true">&rarr;</span></a>
+        <a href="{{ with site.GetPage (index $sections 0) }}{{ .RelPermalink }}{{ else }}{{ printf "/%s/" (index $sections 0) | relURL }}{{ end }}">{{ i18n "all_posts" }} <span aria-hidden="true">&rarr;</span></a>
       </div>
     {{- end -}}
   </section>

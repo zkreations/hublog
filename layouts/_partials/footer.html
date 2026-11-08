@@ -1,7 +1,7 @@
 <footer class="site-footer">
   <div class="footer-container">
     {{- with site.Params.social -}}
-      <nav class="footer-social" aria-label="Social links">
+      <nav class="footer-social" aria-label="{{ i18n "aria_social_links" }}">
         <ul class="social-list">
           {{- range . -}}
             {{- if and .name .url -}}

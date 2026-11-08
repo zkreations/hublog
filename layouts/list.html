@@ -16,7 +16,7 @@
         {{ partial "post-card.html" . }}
       </li>
     {{- else -}}
-      <li class="empty-state">No posts found.</li>
+      <li class="empty-state">{{ i18n "no_posts_found" }}</li>
     {{- end -}}
   </ul>
 

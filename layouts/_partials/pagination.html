@@ -1,18 +1,18 @@
 {{- $paginator := .Paginator -}}
 {{- if gt $paginator.TotalPages 1 -}}
-<nav class="pagination" aria-label="Pagination">
+<nav class="pagination" aria-label="{{ i18n "aria_pagination" }}">
   {{- if $paginator.HasPrev -}}
-    <a class="pagination-link pagination-prev" href="{{ $paginator.Prev.URL }}" rel="prev"><span aria-hidden="true">&larr;</span> Previous</a>
+    <a class="pagination-link pagination-prev" href="{{ $paginator.Prev.URL }}" rel="prev"><span aria-hidden="true">&larr;</span> {{ i18n "previous" }}</a>
   {{- else -}}
-    <span class="pagination-link pagination-disabled" aria-hidden="true">&larr; Previous</span>
+    <span class="pagination-link pagination-disabled" aria-hidden="true">&larr; {{ i18n "previous" }}</span>
   {{- end -}}
 
-  <span class="pagination-info">Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+  <span class="pagination-info">{{ i18n "pagination_page_of" (dict "PageNumber" $paginator.PageNumber "TotalPages" $paginator.TotalPages) }}</span>
 
   {{- if $paginator.HasNext -}}
-    <a class="pagination-link pagination-next" href="{{ $paginator.Next.URL }}" rel="next">Next <span aria-hidden="true">&rarr;</span></a>
+    <a class="pagination-link pagination-next" href="{{ $paginator.Next.URL }}" rel="next">{{ i18n "next" }} <span aria-hidden="true">&rarr;</span></a>
   {{- else -}}
-    <span class="pagination-link pagination-disabled" aria-hidden="true">Next &rarr;</span>
+    <span class="pagination-link pagination-disabled" aria-hidden="true">{{ i18n "next" }} &rarr;</span>
   {{- end -}}
 </nav>
 {{- end -}}

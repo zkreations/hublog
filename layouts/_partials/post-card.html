@@ -14,7 +14,7 @@
     {{- if and $date (not $date.IsZero) -}}
       <time class="post-item-date" datetime="{{ $date.Format "2006-01-02" }}">{{ $date.Format $dateFormat }}</time>
     {{- else -}}
-      <span class="post-item-date post-item-date-empty">Undated</span>
+      <span class="post-item-date post-item-date-empty">{{ i18n "undated" }}</span>
     {{- end -}}
   </div>
   {{- if eq $headingLevel "h3" -}}
