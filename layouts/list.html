@@ -1,9 +1,9 @@
 {{ define "main" }}
-<section class="list-section">
+<section class="page-container">
   <header class="list-header">
-    <h1 class="list-title">{{ .Title }}</h1>
+    <h1 class="page-title">{{ .Title }}</h1>
     {{- with .Content -}}
-      <div class="list-content">
+      <div class="prose">
         {{ . }}
       </div>
     {{- end -}}
@@ -16,7 +16,7 @@
         {{ partial "post-card.html" . }}
       </li>
     {{- else -}}
-      <li class="posts-empty">No posts found.</li>
+      <li class="empty-state">No posts found.</li>
     {{- end -}}
   </ul>
 

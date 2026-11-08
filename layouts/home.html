@@ -1,8 +1,8 @@
 {{ define "main" }}
-<div class="home-container">
-  <h1 class="home-title">{{ .Title | default site.Title }}</h1>
+<div class="page-container">
+  <h1 class="page-title">{{ .Title | default site.Title }}</h1>
   {{- with .Content -}}
-    <div class="home-intro">{{ . }}</div>
+    <div class="prose">{{ . }}</div>
   {{- end -}}
 
   <section class="recent-posts" aria-labelledby="recent-heading">
@@ -17,7 +17,7 @@
           {{ partial "post-card.html" (dict "page" . "headingLevel" "h3") }}
         </li>
       {{- else -}}
-        <li class="posts-empty">No posts published yet.</li>
+        <li class="empty-state">No posts published yet.</li>
       {{- end -}}
     </ul>
 

@@ -1,9 +1,9 @@
 {{ define "main" }}
-<section class="term-section">
+<section class="page-container">
   <header class="term-header">
-    <h1 class="term-title">{{ with .Data.Singular }}{{ . | title }}: {{ end }}{{ .Title }}</h1>
+    <h1 class="page-title">{{ with .Data.Singular }}{{ . | title }}: {{ end }}{{ .Title }}</h1>
     {{- with .Content -}}
-      <div class="term-content">
+      <div class="prose">
         {{ . }}
       </div>
     {{- end -}}
@@ -16,7 +16,7 @@
         {{ partial "post-card.html" . }}
       </li>
     {{- else -}}
-      <li class="posts-empty">No posts found in this term.</li>
+      <li class="empty-state">No posts found in this term.</li>
     {{- end -}}
   </ul>
 

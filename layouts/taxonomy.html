@@ -1,9 +1,9 @@
 {{ define "main" }}
-<section class="taxonomy-section">
+<section class="page-container">
   <header class="taxonomy-header">
-    <h1 class="taxonomy-title">{{ .Title }}</h1>
+    <h1 class="page-title">{{ .Title }}</h1>
     {{- with .Content -}}
-      <div class="taxonomy-content">
+      <div class="prose">
         {{ . }}
       </div>
     {{- end -}}
@@ -19,7 +19,7 @@
       {{- end -}}
     </ul>
   {{- else -}}
-    <p class="taxonomy-empty">No terms found.</p>
+    <p class="empty-state">No terms found.</p>
   {{- end -}}
 </section>
 {{ end }}

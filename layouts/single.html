@@ -2,7 +2,7 @@
 {{- $mainSections := site.Params.mainSections | default (slice "posts") -}}
 {{- $isPost := or (in $mainSections .Section) (in $mainSections .Type) -}}
 {{- $dateFormat := site.Params.date_format | default "2006-01-02" -}}
-<article class="single-article">
+<article class="page-container">
   <header class="single-header">
     <h1 class="single-title">{{ .Title }}</h1>
     {{- with .Description -}}
@@ -27,7 +27,7 @@
     </div>
   {{- end -}}
 
-  <div class="single-content">
+  <div class="prose">
     {{ .Content }}
   </div>
 
