@@ -1,5 +1,5 @@
 baseURL = 'https://example.org/'
-title = 'Hublog Demo'
+title = 'Hublog'
 theme = 'hublog'
 summaryLength = 25
 
