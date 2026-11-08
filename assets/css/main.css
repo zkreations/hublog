@@ -2,10 +2,10 @@
   --primary: #0d9488;
   --on-primary: #ffffff;
   --surface: #ffffff;
-  --on-surface: #1e293b;
-  --surface-variant: #f8fafc;
-  --on-surface-variant: #64748b;
-  --outline: #e2e8f0;
+  --on-surface: #0a0a0a;
+  --surface-variant: #f5f5f5;
+  --on-surface-variant: #737373;
+  --outline: #e5e5e5;
 
   --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -38,13 +38,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #60a5fa;
-    --on-primary: #0f172a;
-    --surface: #0f172a;
-    --on-surface: #f1f5f9;
-    --surface-variant: #1e293b;
-    --on-surface-variant: #94a3b8;
-    --outline: #334155;
+    --primary: #99f6e4;
+    --on-primary: #042f2e;
+    --surface: #0a0a0a;
+    --on-surface: #ffffff;
+    --surface-variant: #262626;
+    --on-surface-variant: #a3a3a3;
+    --outline: #262626;
   }
 }
 
@@ -109,6 +109,11 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
   overflow-wrap: break-word;
+}
+
+b,
+strong {
+  font-weight: 500;
 }
 
 .site-layout {
