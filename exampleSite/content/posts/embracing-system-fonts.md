@@ -1,6 +1,5 @@
 ---
 title: "Embracing System Fonts"
-date: 2026-11-06T12:15:00Z
 description: "Why modern operating system font stacks provide unmatched performance, crispness, and comfort."
 tags: ["css", "typography", "performance"]
 ---

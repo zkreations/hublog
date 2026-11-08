@@ -10,8 +10,14 @@
     {{- end -}}
     {{- if $isPost -}}
       <div class="single-meta">
-        {{- with .Date -}}
-          <time datetime="{{ .Format "2006-01-02" }}">{{ .Format $dateFormat }}</time>
+        {{- $date := .Date -}}
+        {{- if and (not .Params.date) .GitInfo -}}
+          {{- $date = .GitInfo.AuthorDate -}}
+        {{- end -}}
+        {{- if and $date (not $date.IsZero) -}}
+          <time datetime="{{ $date.Format "2006-01-02" }}">{{ $date.Format $dateFormat }}</time>
+        {{- else -}}
+          <span class="single-date-empty">Undated</span>
         {{- end -}}
         {{- if site.Params.show_reading_time | default true -}}
           <span class="meta-separator" aria-hidden="true">&bull;</span>

@@ -1,6 +1,5 @@
 ---
 title: "Introducing Hublog"
-date: 2026-11-02T09:00:00Z
 description: "Welcome to Hublog, a minimalist and accessible Hugo theme built for clarity and speed."
 tags: ["hugo", "theme"]
 ---

@@ -1,6 +1,5 @@
 ---
 title: "The Architecture of Zero JavaScript"
-date: 2026-11-07T16:45:00Z
 description: "Examining how HTML5 semantics, native CSS features, and static builds replace script bloat."
 tags: ["architecture", "web", "minimalism"]
 ---

@@ -1,6 +1,5 @@
 ---
 title: "Markdown Style Guide"
-date: 2026-11-01T10:00:00Z
 description: "A comprehensive demonstration of standard Markdown elements supported by Hublog."
 tags: ["markdown", "style-guide", "demo"]
 ---

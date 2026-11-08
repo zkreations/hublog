@@ -1,6 +1,11 @@
-baseURL = 'https://example.org/'
+# hugo server --themesDir ../..
+
 title = 'Hublog'
 theme = 'hublog'
+baseURL = 'https://example.org/'
+
+enableRobotsTXT = true
+enableGitInfo = true
 summaryLength = 25
 
 [pagination]

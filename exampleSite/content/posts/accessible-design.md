@@ -1,6 +1,5 @@
 ---
 title: "Designing for Digital Accessibility"
-date: 2026-11-04T14:00:00Z
 description: "Practical steps to ensure web typography, color contrast, and keyboard navigation meet WCAG AA standards."
 tags: ["accessibility", "design", "css"]
 ---

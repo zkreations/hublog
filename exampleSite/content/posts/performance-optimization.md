@@ -1,6 +1,5 @@
 ---
 title: "Performance Optimization on the Static Web"
-date: 2026-11-03T11:00:00Z
 description: "How static site generators and zero-dependency pipelines achieve near-perfect performance scores."
 tags: ["performance", "web", "hugo"]
 ---

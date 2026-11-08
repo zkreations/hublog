@@ -1,6 +1,5 @@
 ---
 title: "The Content-First Minimalist Workflow"
-date: 2026-11-05T08:30:00Z
 description: "Focusing on writing, clean Markdown, and straightforward template hierarchies in Hugo."
 tags: ["minimalism", "workflow"]
 ---
