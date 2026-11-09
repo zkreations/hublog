@@ -166,9 +166,9 @@ Hublog includes native support for the [llmstxt.org](https://llmstxt.org) standa
 
 ## Customization
 
-### CSS Tokens
+### Custom CSS & Tokens
 
-All visual properties are defined as semantic CSS custom properties in `:root`. You can customize colors, fonts, and dimensions by overriding tokens in your site's `assets/css/main.css`:
+All visual properties are defined as semantic CSS custom properties in `:root`. You can add custom styles or override tokens by creating `assets/css/custom.css` in your site root without modifying theme files:
 
 ```css
 :root {

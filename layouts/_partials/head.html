@@ -14,7 +14,11 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
 {{- end -}}
 
-{{- $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
+{{- $styles := slice (resources.Get "css/main.css") -}}
+{{- with resources.Get "css/custom.css" -}}
+  {{- $styles = $styles | append . -}}
+{{- end -}}
+{{- $css := $styles | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
 {{ template "_internal/opengraph.html" . }}
