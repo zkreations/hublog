@@ -2,7 +2,7 @@
 
 title = 'Hublog'
 theme = 'hublog'
-baseURL = 'https://example.org/'
+baseURL = 'https://hublog.zkreations.com/'
 
 enableRobotsTXT = true
 enableGitInfo = true
